@@ -18,9 +18,6 @@ ignore = [
     "E203",  # Whitespace before ':' (conflicts with Black)
 ]
 
-[tool.ruff.lint.isort]
-profile = "black"
-
 [tool.ruff.format]
 quote-style = "double"
 indent-style = "space"
