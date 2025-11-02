@@ -1,8 +1,11 @@
 # General config
-export EDITOR="vim"
-export VISUAL="$EDITOR"
 export HISTSIZE=10000
 export SAVEHIST=10000
+
+# Editor
+export EDITOR="vim"
+export VISUAL="$EDITOR"
+export VIMINIT="source ~/.config/vim/config"
 
 # Path
 export PATH="$HOME/.local/bin:$PATH"

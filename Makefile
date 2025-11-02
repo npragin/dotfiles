@@ -1,6 +1,6 @@
-.PHONY: install bin zsh git
+.PHONY: install bin zsh git vim
 
-install: bin zsh git
+install: bin zsh git vim
 
 bin:
 	mkdir -p ~/.local/bin
@@ -12,3 +12,7 @@ zsh:
 git:
 	mkdir -p ~/.config/git
 	stow -t ~/.config/git git
+
+vim:
+	mkdir -p ~/.config/vim
+	stow -t ~/.config/vim vim
