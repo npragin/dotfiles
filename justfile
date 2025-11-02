@@ -1,6 +1,4 @@
-.PHONY: install bin zsh git vim starship ghostty
-
-install: bin zsh git vim starship ghostty
+default: bin zsh git vim starship ghostty
 
 bin:
 	mkdir -p ~/.local/bin
