@@ -1,0 +1,132 @@
+# TODO:
+# nix-shell
+# directory (full truncate above git repo, fish truncate at/below)
+# Should I remove the compilers from c/c++
+
+## Color Scheme
+# Low-attention: bold dimmed white
+# Directory: bold green
+# Languages: bold dimmed purple
+# Environments: bold dimmed cyan
+
+format = """
+$username\
+$hostname\
+$directory\
+$git_status\
+$python\
+$cpp\
+$c\
+$nodejs\
+$golang\
+$rust\
+$cmake\
+$conda\
+$nix_shell\
+$package\
+$git_state\
+$fill\
+$git_branch\
+$battery
+$character
+"""
+
+add_newline = true
+command_timeout = 1000
+
+[username]
+style_root = "bold purple"
+style_user = "dimmed white"
+format = '[$user]($style)[@](dimmed white)'
+
+[hostname]
+ssh_symbol = ""
+style = "dimmed white"
+format = '[$ssh_symbol$hostname:]($style) '
+
+[directory]
+style = "bold green"
+# truncate_to_repo = false
+fish_style_pwd_dir_length = 1
+truncation_length = 1
+# repo_root_format = '[$repo_root]($repo_root_style)[$path]($style)[$read_only]($read_only_style) '
+
+[git_status]
+style = "bold red"
+format = '([\[](dimmed white)[$all_status$ahead_behind]($style)[\]](dimmed white) )'
+ahead = "↑${count}"
+behind = "↓${count}"
+diverged = '↑${ahead_count}↓${behind_count}'
+stashed = "[\\$](bold green)"
+staged = "[+](bold green)"
+deleted = "×"
+conflicted = "≠"
+
+[python]
+# Removed pyenv_prefix
+style = "bold dimmed purple"
+version_format = '${major}.${minor}'
+format = '[${symbol}(${version} )]($style)[(\($virtualenv\) )](bold dimmed cyan)'
+
+[cpp]
+style = "bold dimmed purple"
+disabled = false
+symbol = "C++"
+version_format = "${major}"
+format = '[$symbol($version) ]($style)'
+
+[c]
+style = "bold dimmed purple"
+symbol = "C"
+version_format = "${major}"
+format = '[$symbol($version) ]($style)'
+
+[nodejs]
+style = "bold dimmed purple"
+format = '[$symbol($version )]($style)'
+version_format = "${major}.${minor}"
+
+[golang]
+style = "bold dimmed purple"
+version_format = '${major}.${minor}'
+format = '[$symbol($version )]($style) '
+
+[rust]
+style = "bold dimmed purple"
+format = '[$symbol($version )]($style)'
+version_format = '${major}.${minor}'
+
+[cmake]
+symbol = " "
+version_format = "${major}.${minor}"
+format = '[$symbol(v$version)]($style)'
+style = "bold dimmed purple"
+
+[conda]
+style = "bold dimmed cyan"
+format = '[\($environment\)]($style) '
+
+[nix_shell]
+style = "bold dimmed cyan"
+
+[package]
+style = "bold dimmed cyan"
+format = '[$symbol$version]($style) '
+
+[git_state]
+style = "bold red"
+
+[fill]
+symbol = " "
+
+[git_branch]
+style = "bold purple"
+format = "[$symbol$branch]($style) "
+symbol = " "
+
+[battery]
+unknown_symbol = "󰂑 "
+
+[[battery.display]]
+threshold = 20
+style = 'bold red'

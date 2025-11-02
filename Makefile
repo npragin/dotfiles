@@ -1,6 +1,6 @@
-.PHONY: install bin zsh git vim
+.PHONY: install bin zsh git vim starship
 
-install: bin zsh git vim
+install: bin zsh git vim starship
 
 bin:
 	mkdir -p ~/.local/bin
@@ -16,3 +16,7 @@ git:
 vim:
 	mkdir -p ~/.config/vim
 	stow -t ~/.config/vim vim
+
+starship:
+	mkdir -p ~/.config
+	stow -t ~/.config starship
