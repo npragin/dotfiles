@@ -1,0 +1,24 @@
+# This is the configuration file for Ghostty.
+#
+# The template does not set any default options, since Ghostty ships
+# with sensible defaults for all options. Users should only need to set
+# options that they want to change from the default.
+#
+# Run `ghostty +show-config --default --docs` to view a list of
+# all available config options and their default values.
+#
+# Additionally, each config option is also explained in detail
+# on Ghostty's website, at https://ghostty.org/docs/config.
+
+font-family = MesloLGS Nerd Font Mono
+theme = Arthur
+background-opacity = 0.965
+mouse-hide-while-typing = true
+scrollback-limit = 10000
+shell-integration = zsh
+shell-integration-features = cursor, sudo, title, ssh-terminfo
+quit-after-last-window-closed = true
+macos-icon = xray
+window-height=28
+window-width=80
+working-directory=home
