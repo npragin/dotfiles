@@ -1,6 +1,6 @@
 .PHONY: install bin zsh
 
-install: bin
+install: bin zsh
 
 bin:
 	mkdir -p ~/.local/bin
