@@ -1,21 +1,7 @@
 ##################
-# General Config #
-##################
-export EDITOR="vim"
-export VISUAL="$EDITOR"
-export HISTSIZE=10000
-export SAVEHIST=10000
-
-##############
-# PATH Stuff #
-##############
-export PATH="$HOME/.local/bin:$PATH"
-export PATH="$(npm prefix -g)/bin:$PATH"
-
-##################
 # External Tools #
 ##################
-export NVM_DIR="/Users/noah-pragin-clearscale/.nvm"
+export PATH="$(npm prefix -g)/bin:$PATH"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # >>> conda initialize >>>
