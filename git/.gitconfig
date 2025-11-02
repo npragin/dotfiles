@@ -1,0 +1,74 @@
+[user]
+  name = npragin
+  email = npragin@gmail.com
+[core]
+  autocrlf = false
+  pager = delta
+  excludesfile = /Users/noah-pragin-clearscale/.config/git/exclude
+  fsmonitor = true
+  untrackedCache = true
+  ignorecase = true
+[interactive]
+  diffFilter = delta --color-only
+[add.interactive]
+  useBuiltin = false
+[delta]
+  navigate = true
+  dark = true
+  side-by-side = false
+  line-numbers = true
+  features = Visual Studio Dark+
+[merge]
+  conflictstyle = zdiff3
+  summary = true # Unsure if I should keep
+  verbosity = 1 # Unsure if I should keep
+[diff]
+  colorMoved = plain
+  algorithm = histogram
+  mnemonicPrefix = true
+  renames = copy
+[mergetool]
+  keepBackup = false
+  prompt = false
+[color]
+  ui = true
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red
+  new = green
+[format]
+  pretty = format:%C(blue)%ad%Creset %C(yellow)%h%C(green)%d%Creset %C(blue)%s %C(magenta) [%an]%Creset
+[push]
+  useForceIfIncludes = true
+  autoSetupRemote = true
+  followTags = true
+[rerere]
+  enabled = true
+  autoupdate = true
+[column]
+  ui = auto
+[branch]
+  sort = -committerdate
+[fetch]
+  writeCommitGraph = true
+  prune = true
+  pruneTags = true
+  all = true
+[rebase]
+  autoSquash = true
+  autoStash = true
+  updateRefs = true
+[tag]
+  sort = version:refname
+[init]
+  defaultBranch = main
+[help]
+  autocorrect = prompt
+[pull]
+  rebase = true
+  autoStash = true

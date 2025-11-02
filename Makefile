@@ -1,6 +1,6 @@
-.PHONY: install bin zsh
+.PHONY: install bin zsh git
 
-install: bin zsh
+install: bin zsh git
 
 bin:
 	mkdir -p ~/.local/bin
@@ -8,3 +8,6 @@ bin:
 
 zsh:
 	stow -t ~ zsh
+
+git:
+	stow -t ~ git
