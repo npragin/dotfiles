@@ -1,3 +1,6 @@
+# Remove duplicate PATH entries
+typeset -U PATH
+
 ##################
 # External Tools #
 ##################
