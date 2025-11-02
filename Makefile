@@ -10,4 +10,5 @@ zsh:
 	stow -t ~ zsh
 
 git:
-	stow -t ~ git
+	mkdir -p ~/.config/git
+	stow -t ~/.config/git git
