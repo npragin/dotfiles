@@ -1,2 +1,34 @@
-set mouse=a
+" Visual improvements
+syntax on
 set number
+set cursorline
+set showmatch
+set nowrap
+set sidescrolloff=5
+set scrolloff=5
+
+" Search improvements
+set ignorecase
+set smartcase
+set incsearch
+set hlsearch
+
+" Editing quality of life
+set smartindent
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set backspace=indent,eol,start
+
+" General usability
+set mouse=a
+set clipboard=unnamed
+set wildmenu
+set ruler
+set undofile
+set undodir=$XDG_STATE_HOME/vim/undo
+
+" Disable annoying behavior
+set noswapfile
+set nobackup
+set autoread
