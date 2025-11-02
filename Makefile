@@ -10,13 +10,13 @@ zsh:
 	stow -t ~ zsh
 
 git:
-	mkdir -p ~/.config/git
-	stow -t ~/.config/git git
+	mkdir -p ${XDG_CONFIG_HOME}/git
+	stow -t ${XDG_CONFIG_HOME}/git git
 
 vim:
-	mkdir -p ~/.config/vim
-	stow -t ~/.config/vim vim
+	mkdir -p ${XDG_CONFIG_HOME}/vim
+	stow -t ${XDG_CONFIG_HOME}/vim vim
 
 starship:
-	mkdir -p ~/.config
-	stow -t ~/.config starship
+	mkdir -p ${XDG_CONFIG_HOME}
+	stow -t ${XDG_CONFIG_HOME} starship
