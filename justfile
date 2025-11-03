@@ -1,4 +1,4 @@
-default: bin zsh git vim starship ghostty
+default: bin zsh git vim starship ghostty brew
 
 bin:
 	mkdir -p ~/.local/bin
@@ -22,3 +22,8 @@ starship:
 ghostty:
 	mkdir -p ${XDG_CONFIG_HOME}/ghostty
 	stow -t ${XDG_CONFIG_HOME}/ghostty ghostty
+
+brew:
+	mkdir -p ${XDG_CONFIG_HOME}/homebrew
+	stow -t ${XDG_CONFIG_HOME}/homebrew homebrew
+	brew bundle install --file=${XDG_CONFIG_HOME}/homebrew/Brewfile

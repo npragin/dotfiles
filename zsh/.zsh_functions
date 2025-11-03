@@ -131,3 +131,14 @@ pip3() {
     fi
     command pip3 "$@"
 }
+
+brew() {
+  command brew "$@"
+  if [[ "$1" =~ ^(install|uninstall|remove)$ ]]; then
+    if [[ -L ${XDG_CONFIG_HOME}/homebrew/Brewfile ]]; then
+      brew bundle dump --file=${XDG_CONFIG_HOME}/homebrew/Brewfile --force --no-vscode
+    else
+      echo "\033[1;33m⚠️ Warning: ${XDG_CONFIG_HOME}/homebrew/Brewfile does not exist or is not a symlink - skipping auto-update.\033[0m" >&2
+    fi
+  fi
+}
