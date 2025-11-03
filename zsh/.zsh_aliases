@@ -13,6 +13,7 @@ alias cd='z'
 alias grep="rg"
 alias find="fd"
 alias cat="bat"
+alias pcat="bat --style plain --pager none"
 alias du='dust'
 
 # ls replacements
