@@ -1,5 +1,7 @@
 # Remove duplicate PATH entries
 typeset -U PATH
+bindkey -e
+bindkey "^[[3~" delete-char
 
 ##################
 # External Tools #
