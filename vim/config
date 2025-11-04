@@ -27,8 +27,8 @@ set wildmenu
 set ruler
 set undofile
 set undodir=$XDG_STATE_HOME/vim/undo
+set backupdir=$XDG_STATE_HOME/vim/backup
+set directory=$XDG_STATE_HOME/vim/swap
 
 " Disable annoying behavior
-set noswapfile
-set nobackup
 set autoread
