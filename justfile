@@ -13,6 +13,9 @@ git:
 
 vim:
 	mkdir -p ${XDG_CONFIG_HOME}/vim
+	mkdir -p ${XDG_STATE_HOME}/vim/undo
+	mkdir -p ${XDG_STATE_HOME}/vim/swap
+	mkdir -p ${XDG_STATE_HOME}/vim/backup
 	stow -t ${XDG_CONFIG_HOME}/vim vim
 
 starship:
