@@ -12,13 +12,20 @@
 
 font-family = MesloLGS Nerd Font Mono
 theme = Arthur
-background-opacity = 0.965
-mouse-hide-while-typing = true
-scrollback-limit = 10000
+
 shell-integration = zsh
-shell-integration-features = cursor, sudo, title, ssh-terminfo
+shell-integration-features = true
+
 quit-after-last-window-closed = true
+window-save-state = never
+
+scrollback-limit = 10000000
+background-opacity = 0.965
+window-height = 28
+window-width = 80
+window-padding-x = 10
+
 macos-icon = xray
-window-height=28
-window-width=80
-working-directory=home
+macos-titlebar-style = transparent
+
+mouse-hide-while-typing = true
