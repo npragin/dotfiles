@@ -1,5 +1,5 @@
 # System maintenance
-alias up="brew update && brew upgrade --greedy && brew cleanup && echo && zinit update --parallel --all --quiet && tldr -u"
+alias up="brew update && brew upgrade --greedy && brew cleanup && echo && zinit update --parallel --all --quiet --no-pager && tldr -u"
 
 # Navigation aliases
 alias ..='cd ..'
