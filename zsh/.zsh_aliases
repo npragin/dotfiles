@@ -1,5 +1,5 @@
 # System maintenance
-alias up="brew update && brew upgrade --greedy && brew cleanup && echo && zinit update --parallel --all --quiet --no-pager && tldr -u"
+alias up='brew update && brew upgrade --greedy && brew cleanup && echo && zinit update --parallel --all --quiet --no-pager && tldr -u'
 
 # Navigation aliases
 alias ..='cd ..'
@@ -10,14 +10,14 @@ alias 5..='cd ../../../../..'
 alias cd='z'
 
 # Modern tool replacements
-alias grep="rg"
-alias find="fd"
-alias cat="bat"
-alias pcat="bat --style plain --pager none"
+alias grep='rg'
+alias find='fd'
+alias cat='bat'
+alias pcat='bat --style plain --pager none'
 alias du='dust'
 
 # ls replacements
-alias l="eza -lh"
+alias l='eza -lh'
 alias ls='eza'
 alias ll='eza -lah'
 alias la='eza -lah'
@@ -25,5 +25,5 @@ alias lt='eza --tree'
 alias tree='eza --tree'
 
 # Utility aliases
-alias c="clear"
+alias c='clear'
 alias finder='open -R'
