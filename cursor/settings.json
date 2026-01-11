@@ -1,0 +1,72 @@
+{
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "debug.showInlineBreakpointCandidates": false,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "editor.minimap.enabled": false,
+  "remote.autoForwardPortsSource": "hybrid",
+  "editor.foldingStrategy": "indentation",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "cmake.pinnedCommands": [
+      "workbench.action.tasks.configureTaskRunner",
+      "workbench.action.tasks.runTask"
+  ],
+  "[python]": {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": "explicit",
+        "source.fixAll": "explicit"
+    },
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  },
+  "notebook.formatOnSave.enabled": true,
+  "ruff.importStrategy": "fromEnvironment",
+  "python.defaultInterpreterPath": "",
+  "mypy-type-checker.importStrategy": "fromEnvironment",
+  "[c]": {
+      "editor.wordBasedSuggestions": "off",
+      "editor.semanticHighlighting.enabled": true,
+      "editor.stickyScroll.defaultModel": "foldingProviderModel",
+      "editor.suggest.insertMode": "replace"
+  },
+  "cursor.cpp.disabledLanguages": [
+      "plaintext",
+      "scminput"
+  ],
+  "editor.accessibilitySupport": "off",
+  "python.languageServer": "None",
+  "remote.SSH.remotePlatform": {
+    "hpc": "linux",
+    "dgx2-1": "linux",
+    "dgx2-2": "linux",
+    "dgx2-3": "linux"
+  },
+  "autoDocstring.docstringFormat": "numpy",
+  "editor.fontFamily": "MesloLGS Nerd Font Mono, Menlo, Monaco, 'Courier New', monospace",
+  "terminal.integrated.drawBoldTextInBrightColors": false,
+  "terminal.integrated.minimumContrastRatio": 1,
+
+  "workbench.colorCustomizations": {
+    "terminal.background": "#1C1C1C",
+    "terminal.foreground": "#DDEEDD",
+    "terminalCursor.background": "#000000",
+    "terminalCursor.foreground": "#E2BBEF",
+    "terminal.selectionBackground": "#4D4D4D",
+    "terminal.ansiBlack": "#3D354A",
+    "terminal.ansiRed": "#CD5C5C",
+    "terminal.ansiGreen": "#86AF80",
+    "terminal.ansiYellow": "#E8AE5B",
+    "terminal.ansiBlue": "#6495ED",
+    "terminal.ansiMagenta": "#DEB887",
+    "terminal.ansiCyan": "#B0C4DE",
+    "terminal.ansiWhite": "#BBC7DD",
+    "terminal.ansiBrightBlack": "#554444",
+    "terminal.ansiBrightRed": "#CC5533",
+    "terminal.ansiBrightGreen": "#88AA22",
+    "terminal.ansiBrightYellow": "#FFA75D",
+    "terminal.ansiBrightBlue": "#87CEEB",
+    "terminal.ansiBrightMagenta": "#996600",
+    "terminal.ansiBrightCyan": "#B0C4DE",
+    "terminal.ansiBrightWhite": "#DDCCBB",
+  }
+}
