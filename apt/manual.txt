@@ -1,0 +1,55 @@
+# Manual installation instructions for GUI apps not available via Flatpak
+
+# ============================================================================
+# IMPORTANT: CLI Tools Strategy
+# ============================================================================
+# All CLI tools (bat, eza, fzf, gh, ripgrep, starship, zoxide, etc.) are
+# installed via Homebrew on BOTH macOS and Linux using the Brewfile.
+# This ensures:
+# - Consistent versions across platforms
+# - Same binary names (no batcat/fdfind confusion)
+# - Unified package management
+#
+# To install Homebrew on Linux:
+# /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+# ============================================================================
+
+# === Zinit (Zsh plugin manager) ===
+# Not available via Homebrew or package managers - requires manual git clone
+bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
+
+# === Miniforge (Conda) ===
+wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh
+bash Miniforge3-Linux-x86_64.sh -b -p $HOME/miniforge3
+rm Miniforge3-Linux-x86_64.sh
+
+# === Fonts ===
+# Meslo Nerd Font
+mkdir -p ~/.local/share/fonts
+cd ~/.local/share/fonts
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/Meslo.zip
+unzip Meslo.zip
+rm Meslo.zip
+fc-cache -fv
+
+# === GUI Applications ===
+# Claude - Download from https://claude.ai
+# Cursor - Download from https://cursor.sh
+# Ghostty - Build from source or download from https://ghostty.org
+# Zoom - Download .deb from https://zoom.us/download
+# Stirling PDF - Use Docker: docker pull frooodle/s-pdf
+
+# === XQuartz equivalent ===
+# Not needed on Linux - X11 is native
+# For Wayland, XWayland is typically pre-installed
+
+# === Tailscale (VPN mesh network) ===
+# No official Flatpak available - install via apt or official script
+# Option 1: Official install script
+curl -fsSL https://tailscale.com/install.sh | sh
+# Option 2: Add apt repository (see https://tailscale.com/kb/1031/install-linux)
+# Option 3: Unofficial Flatpak GUI frontends (dev.deedles.Trayscale or org.fkoehler.KTailctl)
+
+# === Stats equivalent (system monitor) ===
+# btop is available via apt (already in packages.txt)
+# btop is a modern, colorful resource monitor
