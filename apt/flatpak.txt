@@ -1,0 +1,36 @@
+# GUI applications to install via Flatpak
+# Install Flatpak: sudo apt install flatpak
+# Add Flathub: flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+# Install apps: xargs -a flatpak.txt -I {} flatpak install -y flathub {}
+
+# Browsers
+one.ablaze.floorp
+
+# Communication
+com.discordapp.Discord
+org.mozilla.Thunderbird
+
+# Productivity
+md.obsidian.Obsidian
+
+# Multimedia
+org.videolan.VLC
+org.gimp.GIMP
+com.transmissionbt.Transmission
+
+# Development (if preferred over native)
+# Note: Claude, Cursor, Ghostty may not be available on Flathub
+# Consider using .deb packages or AppImages for these
+
+# Note: Some apps don't have official Flatpak packages:
+# - tailscale: No official Flatpak; install via apt or official script from tailscale.com
+#   (Unofficial GUI alternatives: dev.deedles.Trayscale, org.fkoehler.KTailctl)
+# - claude: Install from claude.ai (AppImage or .deb)
+# - cursor: Install from cursor.sh (AppImage or .deb)
+# - ghostty: In progress for Flathub, currently install from ghostty.org or build from source
+# - stats: macOS-only; Linux alternative is 'btop' (apt install btop)
+# - stirling-pdf: Flatpak request pending; use Docker or manual install from GitHub
+# - xquartz: Not needed on Linux (X11 is native)
+# - zoom: Install .deb from zoom.us/download
+# - miniforge: Manual install from conda-forge
+# - font-meslo-lg-nerd-font: Manual install from Nerd Fonts releases
