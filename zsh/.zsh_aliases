@@ -17,12 +17,12 @@ alias pcat='bat --style plain --pager none'
 alias du='dust'
 
 # ls replacements
-alias l='eza -lh'
-alias ls='eza'
-alias ll='eza -lah'
-alias la='eza -lah'
-alias lt='eza --tree'
-alias tree='eza --tree'
+alias l='eza -lh --group-directories-first'
+alias ls='eza --group-directories-first'
+alias ll='eza -lah --group-directories-first'
+alias la='eza -lah --group-directories-first'
+alias lt='eza --tree --group-directories-first'
+alias tree='eza --tree --group-directories-first'
 
 # Utility aliases
 alias c='clear'
