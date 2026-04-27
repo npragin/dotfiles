@@ -1,0 +1,12 @@
+/Applications/Thunderbird.app
+/Applications/Spark Desktop.app
+/Applications/Discord.app
+/Applications/Ghostty.app
+/Applications/Cursor.app
+/Applications/Notion.app
+/Applications/Linear.app
+/Applications/Floorp.app
+/Applications/Claude.app
+/System/Applications/Music.app
+/System/Applications/Messages.app
+/System/Applications/iPhone Mirroring.app
