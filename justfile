@@ -1,4 +1,4 @@
-default: bin zsh git vim starship ghostty brew cursor
+default: bin zsh git vim starship ghostty brew cursor macos
 
 bin:
 	mkdir -p ~/.local/bin
@@ -44,3 +44,17 @@ cursor:
         [[ -z "$ext" || "$ext" == \#* ]] && continue; \
         cursor --install-extension "$ext"; \
     done < "${XDG_CONFIG_HOME}/cursor/extensions.txt"
+
+macos:
+    mkdir -p ${XDG_CONFIG_HOME}/macos
+    mkdir -p "${HOME}/Library/LaunchAgents"
+    stow -t ${XDG_CONFIG_HOME}/macos macos
+    sed "s|__HOME__|${HOME}|g" "${XDG_CONFIG_HOME}/macos/com.dock.watch.plist.tmpl" > "${HOME}/Library/LaunchAgents/com.dock.watch.plist"
+    launchctl bootout gui/$(id -u) "${HOME}/Library/LaunchAgents/com.dock.watch.plist" || true
+    launchctl bootstrap gui/$(id -u) "${HOME}/Library/LaunchAgents/com.dock.watch.plist"
+    dockutil --remove all --no-restart
+    while IFS= read -r app; do \
+        [[ -z "$app" || "$app" == \#* ]] && continue; \
+        dockutil --add "$app" --no-restart; \
+    done < "${XDG_CONFIG_HOME}/macos/dock.txt"
+    killall Dock
